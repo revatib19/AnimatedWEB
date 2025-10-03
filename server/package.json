@@ -1,0 +1,26 @@
+{
+  "name": "a11y-checker-server",
+  "version": "1.0.0",
+  "description": "Accessibility Checker backend (WCAG 2.2) using Express, axe-core, and pdf parsers",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^4.6.82",
+    "puppeteer": "^23.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.3"
+  }
+}

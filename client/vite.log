@@ -1,0 +1,151 @@
+nohup: ignoring input
+
+> client@0.0.1 dev
+> vite --host --port 5173
+
+
+  VITE v5.4.20  ready in 537 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://172.30.0.2:5173/
+Error:   Failed to scan for dependencies from entries:
+  /workspace/client/index.html
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "useState" has already been declared[0m
+
+    src/App.jsx:177:33:
+[37m      177 │ import React, { useMemo, useRef, [32museState[37m } from "react";
+          ╵                                  [32m~~~~~~~~[0m
+
+  The symbol "useState" was originally declared here:
+
+    src/App.jsx:1:9:
+[37m      1 │ import { [32museState[37m } from 'react'
+        ╵          [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "axios" has already been declared[0m
+
+    src/App.jsx:178:7:
+[37m      178 │ import [32maxios[37m from "axios";
+          ╵        [32m~~~~~[0m
+
+  The symbol "axios" was originally declared here:
+
+    src/App.jsx:2:7:
+[37m      2 │ import [32maxios[37m from 'axios'
+        ╵        [32m~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mMultiple exports with the same name "default"[0m
+
+    src/App.jsx:272:7:
+[37m      272 │ export [32mdefault[37m function App() {
+          ╵        [32m~~~~~~~[0m
+
+  The name "default" was originally exported here:
+
+    src/App.jsx:6:7:
+[37m      6 │ export [32mdefault[37m function App() {
+        ╵        [32m~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "App" has already been declared[0m
+
+    src/App.jsx:272:24:
+[37m      272 │ export default function [32mApp[37m() {
+          ╵                         [32m~~~[0m
+
+  The symbol "App" was originally declared here:
+
+    src/App.jsx:6:24:
+[37m      6 │ export default function [32mApp[37m() {
+        ╵                         [32m~~~[0m
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    src/App.jsx:272:0:
+[37m      272 │ [32mexport[37m default function App() {
+          ╵ [32m~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "React" has already been declared[0m
+
+    src/main.jsx:12:7:
+[37m      12 │ import [32mReact[37m from "react";
+         ╵        [32m~~~~~[0m
+
+  The symbol "React" was originally declared here:
+
+    src/main.jsx:1:7:
+[37m      1 │ import [32mReact[37m from 'react'
+        ╵        [32m~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "createRoot" has already been declared[0m
+
+    src/main.jsx:13:9:
+[37m      13 │ import { [32mcreateRoot[37m } from "react-dom/client";
+         ╵          [32m~~~~~~~~~~[0m
+
+  The symbol "createRoot" was originally declared here:
+
+    src/main.jsx:2:9:
+[37m      2 │ import { [32mcreateRoot[37m } from 'react-dom/client'
+        ╵          [32m~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "App" has already been declared[0m
+
+    src/main.jsx:14:7:
+[37m      14 │ import [32mApp[37m from "./App.jsx";
+         ╵        [32m~~~[0m
+
+  The symbol "App" was originally declared here:
+
+    src/main.jsx:3:7:
+[37m      3 │ import [32mApp[37m from './App.jsx'
+        ╵        [32m~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe symbol "root" has already been declared[0m
+
+    src/main.jsx:18:6:
+[37m      18 │ const [32mroot[37m = createRoot(container);
+         ╵       [32m~~~~[0m
+
+  The symbol "root" was originally declared here:
+
+    src/main.jsx:6:6:
+[37m      6 │ const [32mroot[37m = createRoot(document.getElementById('root'))
+        ╵       [32m~~~~[0m
+
+
+    at failureErrorWithLog (/workspace/client/node_modules/esbuild/lib/main.js:1472:15)
+    at /workspace/client/node_modules/esbuild/lib/main.js:945:25
+    at runOnEndCallbacks (/workspace/client/node_modules/esbuild/lib/main.js:1315:45)
+    at buildResponseToResult (/workspace/client/node_modules/esbuild/lib/main.js:943:7)
+    at /workspace/client/node_modules/esbuild/lib/main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/workspace/client/node_modules/esbuild/lib/main.js:954:54)
+    at handleRequest (/workspace/client/node_modules/esbuild/lib/main.js:647:17)
+    at handleIncomingPacket (/workspace/client/node_modules/esbuild/lib/main.js:672:7)
+    at Socket.readFromStdout (/workspace/client/node_modules/esbuild/lib/main.js:600:7)
+6:06:08 AM [vite] Pre-transform error: /workspace/client/src/main.jsx: Identifier 'React' has already been declared. (12:7)
+
+  10 |   </React.StrictMode>
+  11 | )
+> 12 | import React from "react";
+     |        ^
+  13 | import { createRoot } from "react-dom/client";
+  14 | import App from "./App.jsx";
+  15 | import "./styles.css";
+6:06:08 AM [vite] Pre-transform error: /workspace/client/src/main.jsx: Identifier 'React' has already been declared. (12:7)
+
+  10 |   </React.StrictMode>
+  11 | )
+> 12 | import React from "react";
+     |        ^
+  13 | import { createRoot } from "react-dom/client";
+  14 | import App from "./App.jsx";
+  15 | import "./styles.css";
