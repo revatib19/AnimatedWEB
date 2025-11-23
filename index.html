@@ -1,32 +1,345 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OpenScholar | Global Learning Platform</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<div class="logo"><h1 class="animated infinite heartBeat">INDIA</h1></div>
-			<div class="menu">
-				<a href="#">HOME</a>
-				<a href="#">ABOUT</a>
-				<a href="#">GALLERY</a>
-				<a href="#">CONTACT</a>
+	<header class="hero" id="home">
+		<nav class="navbar container">
+			<div class="brand">
+				<span class="brand-mark">Open</span>Scholar
 			</div>
+			<div class="nav-links">
+				<a href="#login">Login</a>
+				<a href="#persona">Persona</a>
+				<a href="#profile">Profile</a>
+				<a href="#library">Courses</a>
+				<a href="#certificate">Certificate</a>
+				<a href="#internship">Internship</a>
+			</div>
+			<a class="ghost-btn" href="#library">Explore Courses</a>
 		</nav>
-			<main>
-				<section>
-					<h3>WELCOME TO INDIA</h3>
-					<h1>DO COME & VISIT <span class="changename"></span></h1>
-					<p>"INDIA ONCE IS NOT ENOUGH"</p>
-					<a href="#" class="btn1">Learn More</a>
-					<a href="#" class="btn2">SIGN UP</a>
-				</section>
-			</main>
+		<div class="hero-body container">
+			<p class="eyebrow">Open to every student & professional</p>
+			<h1>Learning that scales with your ambition.</h1>
+			<p class="hero-copy">
+				OpenScholar is a company-wide learning platform that keeps pathways transparent,
+				provides job-ready skills, and issues verifiable credentials the moment you finish.
+			</p>
+			<div class="hero-actions">
+				<a class="primary-btn" href="#persona">Choose Persona</a>
+				<a class="secondary-btn" href="#video">Watch Sample Lesson</a>
+			</div>
+			<div class="hero-stats">
+				<div>
+					<p class="stat-number">120k+</p>
+					<p class="stat-label">Active learners</p>
+				</div>
+				<div>
+					<p class="stat-number">350+</p>
+					<p class="stat-label">Industry courses</p>
+				</div>
+				<div>
+					<p class="stat-number">97%</p>
+					<p class="stat-label">Completion rate</p>
+				</div>
+			</div>
+		</div>
 	</header>
 
+	<main>
+		<section id="login" class="panel panel-highlight">
+			<div class="container split-layout">
+				<div>
+					<p class="eyebrow">Login</p>
+					<h2>Sign in to continue learning</h2>
+					<p>One account unlocks your personalized profile, saved coursework, and certificates.</p>
+					<ul class="benefits">
+						<li>Secure SSO with enterprise-grade protection.</li>
+						<li>Progress sync across web and mobile.</li>
+						<li>AI recommendations tuned to your persona.</li>
+					</ul>
+				</div>
+				<form class="login-form">
+					<label for="email">Work or student email</label>
+					<input type="email" id="email" placeholder="you@company.com" required>
+
+					<label for="password">Password</label>
+					<input type="password" id="password" placeholder="••••••••" required>
+
+					<div class="radio-group">
+						<p>Account type</p>
+						<label>
+							<input type="radio" name="account-type" value="student" checked>
+							Student
+						</label>
+						<label>
+							<input type="radio" name="account-type" value="professional">
+							Working professional
+						</label>
+					</div>
+
+					<button type="submit" class="primary-btn">Login to Dashboard</button>
+					<p class="help-text">No account? <a href="#persona">Create one for free</a></p>
+				</form>
+			</div>
+		</section>
+
+		<section id="persona" class="panel">
+			<div class="container">
+				<div class="section-header">
+					<p class="eyebrow">Persona selection</p>
+					<h2>Choose the path that fits your season of life.</h2>
+					<p>We tailor journeys based on whether you're currently studying or already building your career.</p>
+				</div>
+				<div class="persona-grid">
+					<article class="persona-card active" data-persona="student">
+						<div class="persona-label">Student</div>
+						<h3>Campus-ready learning stack</h3>
+						<ul>
+							<li>Mentor-backed study groups and live doubt solving.</li>
+							<li>Foundational modules built for semester timelines.</li>
+							<li>Internship recommendations by skills, not GPA.</li>
+						</ul>
+						<button class="secondary-btn" type="button">Start as Student</button>
+					</article>
+
+					<article class="persona-card" data-persona="professional">
+						<div class="persona-label">Working professional</div>
+						<h3>Upskilling for the modern workplace</h3>
+						<ul>
+							<li>Role-based learning paths curated with global employers.</li>
+							<li>Micro-courses you can finish over lunch breaks.</li>
+							<li>Instant portfolio artifacts to showcase impact.</li>
+						</ul>
+						<button class="secondary-btn" type="button">Start as Professional</button>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="profile" class="panel panel-contrast">
+			<div class="container profile-wrapper">
+				<div>
+					<p class="eyebrow">Profile page</p>
+					<h2>One profile, every milestone.</h2>
+					<p>Your progress, badges, and reflections live in a single shareable URL that recruiters can trust.</p>
+				</div>
+				<div class="profile-card">
+					<div class="profile-header">
+						<div class="avatar" aria-hidden="true">PM</div>
+						<div>
+							<h3>Priya Menon</h3>
+							<p>Product Analyst • Bengaluru</p>
+						</div>
+						<span class="badge">Pro Member</span>
+					</div>
+					<div class="profile-progress">
+						<div>
+							<p>AI Strategy Lab</p>
+							<div class="progress-bar">
+								<span style="width: 72%"></span>
+							</div>
+						</div>
+						<div>
+							<p>Data Storytelling</p>
+							<div class="progress-bar">
+								<span style="width: 54%"></span>
+							</div>
+						</div>
+						<div>
+							<p>Leadership Sprint</p>
+							<div class="progress-bar">
+								<span style="width: 88%"></span>
+							</div>
+						</div>
+					</div>
+					<ul class="profile-metrics">
+						<li>
+							<strong>12</strong>
+							<span>Certificates</span>
+						</li>
+						<li>
+							<strong>48</strong>
+							<span>Skills validated</span>
+						</li>
+						<li>
+							<strong>5</strong>
+							<span>Projects shipped</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="library" class="panel">
+			<div class="container">
+				<div class="section-header">
+					<p class="eyebrow">Course library</p>
+					<h2>Browse live, cohort, and on-demand programs.</h2>
+					<p>Every course includes career services, assessments, and community support.</p>
+				</div>
+				<div class="course-grid">
+					<article class="course-card">
+						<span class="course-tag">Data</span>
+						<h3>Practical Data Science</h3>
+						<p>Real-time analytics, feature stores, and deployment workflows taught by industry engineers.</p>
+						<div class="course-meta">
+							<span>9 modules</span>
+							<span>Mentor office hours</span>
+						</div>
+						<button class="secondary-btn" type="button">View syllabus</button>
+					</article>
+					<article class="course-card">
+						<span class="course-tag">Product</span>
+						<h3>AI Product Strategy</h3>
+						<p>Create outcome-driven roadmaps, experiment responsibly, and ship AI features with confidence.</p>
+						<div class="course-meta">
+							<span>6 weeks</span>
+							<span>Capstone project</span>
+						</div>
+						<button class="secondary-btn" type="button">View syllabus</button>
+					</article>
+					<article class="course-card">
+						<span class="course-tag">Tech</span>
+						<h3>Full-Stack in 30 Days</h3>
+						<p>Hands-on sprint that covers modern tooling, cloud infra, and automated testing best practices.</p>
+						<div class="course-meta">
+							<span>30 lessons</span>
+							<span>Career coaching</span>
+						</div>
+						<button class="secondary-btn" type="button">View syllabus</button>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="video" class="panel panel-highlight">
+			<div class="container video-wrapper">
+				<div class="video-frame">
+					<iframe
+						src="https://www.youtube.com/embed/pXJ3bJwqF1E"
+						title="Sample course video"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<div>
+					<p class="eyebrow">Course video content</p>
+					<h2>See how lessons blend theory with practice.</h2>
+					<p>Each video is paired with labs, transcripts, and AI-powered summaries so you never lose context.</p>
+					<ul class="video-outline">
+						<li>⚡ Quick briefs to set up the why.</li>
+						<li>🧪 Live build sessions inside real tools.</li>
+						<li>📝 Reflection prompts to reinforce learning.</li>
+					</ul>
+					<a class="primary-btn" href="#certificate">Unlock certificate</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="certificate" class="panel">
+			<div class="container certificate-wrapper">
+				<div class="section-header">
+					<p class="eyebrow">Course completion certificate</p>
+					<h2>Verified credentials issued instantly.</h2>
+					<p>Each certificate is blockchain-backed and exportable to LinkedIn with one click.</p>
+				</div>
+				<div class="certificate-card">
+					<div class="certificate-header">
+						<p>OpenScholar</p>
+						<p>Certificate of Completion</p>
+					</div>
+					<p class="certificate-recipient">Presented to <strong>Anik Gupta</strong></p>
+					<p>For successfully completing the program <strong>AI Strategy Lab</strong> on 23 Nov 2025.</p>
+					<div class="certificate-footer">
+						<div>
+							<p class="signature">Leena Rao</p>
+							<span>Chief Learning Officer</span>
+						</div>
+						<div class="certificate-code">
+							Credential ID<br><strong>OS-25-9812</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="internship" class="panel panel-contrast">
+			<div class="container">
+				<div class="section-header">
+					<p class="eyebrow">Internship pathway</p>
+					<h2>From classroom to company in four steps.</h2>
+					<p>Structured projects, mentors, and hiring partners to accelerate your first or next role.</p>
+				</div>
+				<ol class="pathway">
+					<li>
+						<span class="step">1</span>
+						<div>
+							<h3>Discovery sprint</h3>
+							<p>Match with industries, roles, and mentors through a guided assessment.</p>
+							<span class="badge">Week 1</span>
+						</div>
+					</li>
+					<li>
+						<span class="step">2</span>
+						<div>
+							<h3>Project simulation</h3>
+							<p>Join real product pods, collaborate asynchronously, and ship portfolio-ready work.</p>
+							<span class="badge">Weeks 2-4</span>
+						</div>
+					</li>
+					<li>
+						<span class="step">3</span>
+						<div>
+							<h3>Mentor review</h3>
+							<p>Receive feedback from hiring managers and iterate with targeted coaching.</p>
+							<span class="badge">Week 5</span>
+						</div>
+					</li>
+					<li>
+						<span class="step">4</span>
+						<div>
+							<h3>Offer day</h3>
+							<p>Interview with partner companies confident in your verified skills and outcomes.</p>
+							<span class="badge">Week 6</span>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container footer-content">
+			<p>© 2025 OpenScholar Learning Platform</p>
+			<p>Built for lifelong learners everywhere.</p>
+		</div>
+	</footer>
+
+	<script>
+		const personaCards = document.querySelectorAll('.persona-card');
+		const personaInputs = document.querySelectorAll('input[name="account-type"]');
+
+		personaCards.forEach(card => {
+			card.addEventListener('click', () => {
+				personaCards.forEach(item => item.classList.remove('active'));
+				card.classList.add('active');
+
+				const persona = card.dataset.persona;
+				personaInputs.forEach(input => {
+					input.checked = input.value === persona;
+				});
+			});
+		});
+	</script>
 </body>
 </html>
